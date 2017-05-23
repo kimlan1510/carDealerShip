@@ -9,7 +9,7 @@ namespace carDealership_2
     public HomeModule()
     {
       Get["/"] = _ => View["index.cshtml"];
-      Get["/view_all_car"] = _ => {
+      Get["/view_all_cars"] = _ => {
         List<cars> allCar = cars.ShowInventory();
         return View["view_all_cars.cshtml", allCar];
       };

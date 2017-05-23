@@ -1,8 +1,8 @@
 <h1>Inventory</h1>
 <ul>
-  @foreach(cars car in Model)
+  @foreach(var car in Model)
   {
-    <li>@car</li>
+    <li>@car.GetModel(), @car.GetMiles(), $ @car.GetPrice()</li>
   }
 </ul>
 <p><a href="/">Add another car</a></p>
