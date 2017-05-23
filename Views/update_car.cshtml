@@ -1,0 +1,15 @@
+<h1>Modify the car here</h1>
+<p>you pick @Model.GetModel(), @Model.GetMiles() miles, $@Model.GetPrice() </p>
+<form action="/update_car" method="post">
+  <h2>Use the form below to modify the car</h2>
+  <label for="model">Model</label>
+  <input id="model" name="model" type="text">
+  <label for="miles">Mileage</label>
+  <input id="miles" name="miles" type="text">
+  <label for="price">Price</label>
+  <input id="price" name="price" type="text">
+  <button type="submit">Submit</button>
+</form>
+
+<p><a href="/">Add another car</a></p>
+<p><a href="/view_all_cars">View Inventory</a></p>

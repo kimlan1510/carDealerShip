@@ -2,7 +2,7 @@
 <ul>
   @foreach(var car in Model)
   {
-    <li>@car.GetModel(), @car.GetMiles(), $ @car.GetPrice()</li>
+    <li><a href="/update_car/@car.GetId()">@car.GetModel(), @car.GetMiles() miles, $@car.GetPrice()</a></li>
   }
 </ul>
 <p><a href="/">Add another car</a></p>

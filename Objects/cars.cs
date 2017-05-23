@@ -6,14 +6,20 @@ namespace carDealership_2.Objects
     private string _model;
     private int _price;
     private int _miles;
+    private int _id;
     private static List<cars> _instances = new List<cars>();
     public cars(string makeModel, int miles, int price)
     {
     SetModel(makeModel);
     SetPrice(price);
     SetMiles(miles);
+    _id = _instances.Count;
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
     public void SetModel(string newModel)
     {
       _model = newModel;
@@ -57,6 +63,11 @@ namespace carDealership_2.Objects
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static cars Find(int searchId)
+    {
+      return _instances[searchId ];
     }
 
     // Car porsche = new Car("2014 Porsche 911", 114991, 786);
