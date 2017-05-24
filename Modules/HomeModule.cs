@@ -19,14 +19,12 @@ namespace carDealership_2
         return View["update_car.cshtml", car];
       };
 
-      // Post["/update_car/{id}"] = parameters => {
-      //   cars car = cars.Find(parameters.id);
-      //   List<cars> allCar = cars.ShowInventory();
-      //   cars newCar = new cars(Request.Form["model"], Request.Form["miles"], Request.Form["price"]);
-      //   allCar[parameters.id] = newCar;
-      //
-      //   return View["update_car.cshtml/{id}", car];
-      // };
+      Post["/update_car/{id}"] = parameters => {
+        cars car = cars.Find(parameters.id);
+        List<cars> allCar = cars.ShowInventory();
+        cars newCar = new cars(Request.Form["model"], Request.Form["miles"], Request.Form["price"]);
+        allCar[parameters.id] = newCar;
+      };
 
       Post["/cars_added"] = _ => {
         cars newCar = new cars(Request.Form["model"], Request.Form["miles"], Request.Form["price"]);
