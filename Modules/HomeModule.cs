@@ -24,6 +24,7 @@ namespace carDealership_2
         List<cars> allCar = cars.ShowInventory();
         cars newCar = new cars(Request.Form["model"], Request.Form["miles"], Request.Form["price"]);
         allCar[parameters.id] = newCar;
+        return View["update_car.cshtml", newCar];
       };
 
       Post["/cars_added"] = _ => {
